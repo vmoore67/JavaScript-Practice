@@ -1,0 +1,19 @@
+var image = new SimpleImage("chapel.png");
+
+var iw = image.getWidth();
+print (iw);
+
+for (var pix of image.values()){
+
+    if (pix.getX() <= iw/3){
+        pix.setRed(255);
+    }
+    else if (pix.getX() > iw/3 && pix.getX() <= 2*iw/3){
+        pix.setGreen(255);
+    }
+    else {
+        pix.setBlue(255);
+    }
+}
+
+print (image);  
